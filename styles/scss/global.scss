@@ -1,0 +1,21 @@
+/* Customs here */
+
+// Colors
+$primary: #ddf9ff;
+$success: #f3fcea;
+
+// Borders
+$border-radius: .8rem;
+
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
+
+
+// Custom
+.substances .card {
+    background-color: $primary;
+
+    &:nth-child(odd) {
+        background-color: $success;
+    }
+}
