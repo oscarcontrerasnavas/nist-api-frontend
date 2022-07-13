@@ -1,39 +1,22 @@
-import SubstanceCard from '../components/substance-card';
+import Link from 'next/link'
+import Header from '../components/header'
 
-function Home({substances}) {
+function Home() {
   return (
     <main className='container bg-white p-3 my-3'>
-      <header>
-        <h1>NIST API
-        <small className='d-block fs-6'>Unofficial<sup>*</sup></small>
-        </h1>
-      </header>
+      
+      <Header/>
 
       <p className='mt-4'>
         Thanks for visiting this unofficial effort to bring a programatic solution to the Nist Webbook website with its useful information
       </p>
 
-      <div className='row'>
-        <div className='col substances'>
-          {substances.map((substance)=>(
-            <SubstanceCard key={substance.cas} substance={substance} />
-          ))}
-        </div>
-      </div>
+      <Link href="/substances/page/1">
+        <a className='btn btn-lg btn-success'>List of common substances</a>
+      </Link>
+
     </main>
   )
-}
-
-export async function getStaticProps() {
-  const axios = require('axios').default;
-  const response = await axios.get("https://nist-scrapyrt.herokuapp.com/substances")
-  const substances = await response.data.items
-
-  return {
-    props: {
-      substances,
-    },
-  }
 }
 
 export default Home

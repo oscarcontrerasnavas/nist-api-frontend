@@ -1,21 +1,30 @@
 /* Customs here */
 
 // Colors
-$primary: #ddf9ff;
-$success: #f3fcea;
+$primary: #1aa179; //$teal-600
+// $success: #f3fcea;
 
 // Borders
-$border-radius: .8rem;
+// $border-radius: .8rem;
 
 
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 
+// Utilities
+.rounded-4 {
+  border-radius: .8rem;
+}
+
 
 // Custom
+header small {
+  font-size: 0.8rem;
+}
+
 .substances .card {
-    background-color: $primary;
+    background-color: $yellow-100;
 
     &:nth-child(odd) {
-        background-color: $success;
+        background-color: $teal-100;
     }
 }
