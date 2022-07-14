@@ -1,6 +1,8 @@
 import parse from 'html-react-parser';
 
 function SubstanceDisplay({substance}) {
+  const base_url = "https://nist-scrapyrt.herokuapp.com";
+
   return (
     <div className="row">
         <div className="col-12">
@@ -53,30 +55,12 @@ function SubstanceDisplay({substance}) {
                 </tbody>
             </table>
 
-            <h3 className='h6 mt-4 text-primary'>Gas phase data</h3>
-
-            <table className="table table-light">
-                <thead>
-                    <tr>
-                        <th scope='col'>Quantity</th>
-                        <th scope='col'>Value</th>
-                        <th scope='col'>Units</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr> 
-                        <th scope='row'>
-                            &Delta;<sub>f</sub>H<sup>º</sup><sub>gas</sub>
-                        </th>
-                        <td>
-                            {substance.enthalpy_formation_gas.value}
-                        </td>
-                        <td>
-                            {substance.enthalpy_formation_gas.units}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <a href={
+              base_url +
+              `/crawl.json?spider_name=webbook_nist&start_requests=true&crawl_args={\"cas\":\"${substance.cas}\"}`
+              } className="btn btn-primary my-4" target={'_blank'}>
+                Full JSON response
+              </a>
         </div>
     </div>
   )
