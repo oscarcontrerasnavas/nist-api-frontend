@@ -58,7 +58,7 @@ function SubstanceDisplay({substance}) {
             <a href={
               base_url +
               `/crawl.json?spider_name=webbook_nist&start_requests=true&crawl_args={\"cas\":\"${substance.cas}\"}`
-              } className="btn btn-primary my-4" target={'_blank'}>
+              } className="btn btn-primary my-4" target='_blank' rel="noreferrer">
                 Full JSON response
               </a>
         </div>
