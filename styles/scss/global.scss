@@ -17,6 +17,10 @@ $primary: #1aa179; //$teal-600
 
 
 // Custom
+main.container {
+  max-width: 480px; // Force every device to look like a phone
+}
+
 header small {
   font-size: 0.8rem;
 }

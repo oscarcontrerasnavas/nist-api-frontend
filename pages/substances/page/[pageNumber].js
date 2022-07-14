@@ -12,13 +12,13 @@ function List({
     substances,
 }) {
   return (
-    <div className='container bg-white p-3 my-3'>
+    <main className='container bg-white p-3 my-3'>
 
       <Header title="Substances" />
       <SubstanceList substances={substances} />
       <SubstancePagination totalPages={totalPages} currentPage={currentPage}/>
 
-    </div>
+    </main>
   )
 }
 

@@ -4,12 +4,12 @@ import SubstanceDisplay from "../../../components/substance-display"
 
 export default function Substance({substance}) {
   return (
-    <div className='container bg-white p-3 my-3'>
+    <main className='container bg-white p-3 my-3'>
 
       <Header />
       <SubstanceDisplay substance={substance} />
 
-    </div>
+    </main>
   )
 }
 
