@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const paths = await getAllPages()
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
