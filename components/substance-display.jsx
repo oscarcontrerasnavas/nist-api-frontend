@@ -4,7 +4,7 @@ function SubstanceDisplay({substance}) {
   const base_url = "https://nist-scrapyrt.herokuapp.com";
 
   return (
-    <div className="row">
+    <div className="row pt-4">
         <div className="col-12">
             <h2 className="text-capitalize text-center">{substance.name}</h2>
             <div className="fw-bold text-primary text-center">

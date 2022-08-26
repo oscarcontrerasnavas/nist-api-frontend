@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 function Header({title}) {
   return (
-    <header className="mb-4">
-      <Link href={'/'}>
+    <header>
+      <Link href={'/substances/page/1'}>
       <a className='link-dark text-decoration-none'>
         <h1>
           <span className="d-block">

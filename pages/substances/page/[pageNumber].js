@@ -1,5 +1,6 @@
 import { getAllPages, getPage } from '../../../utils/substances';
 import Header from '../../../components/header';
+import SearchBar from '../../../components/search-bar';
 import SubstanceList from '../../../components/substance-list';
 import SubstancePagination from '../../../components/substance-pagination';
 
@@ -14,8 +15,9 @@ function List({
   return (
     <main className='container bg-white p-3 my-3'>
 
-      <Header title="Substances" />
-      <SubstanceList substances={substances} />
+      <Header title="Substances"/>
+      <SearchBar/>
+      <SubstanceList substances={substances}/>
       <SubstancePagination totalPages={totalPages} currentPage={currentPage}/>
 
     </main>
