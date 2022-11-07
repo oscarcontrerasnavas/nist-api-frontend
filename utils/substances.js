@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = "nist-api.fly.dev";
+const base_url = "https://nist-api.fly.dev";
 
 export async function getAllPages() {
     const response = await axios.get(base_url + "/substances")
